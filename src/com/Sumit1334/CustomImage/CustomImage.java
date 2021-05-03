@@ -110,7 +110,7 @@ public class CustomImage extends AndroidNonvisibleComponent implements Component
     public void CreateImage(AndroidViewComponent in,int id,String shape,String picture) throws IOException {
 
         if (!component.containsKey(id)) {
-            if (shape == "circular") {
+            if (shape.equals("circular")) {
                 CircularImageView imageView = new CircularImageView(this.context);
                 imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 imageView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
@@ -137,7 +137,7 @@ public class CustomImage extends AndroidNonvisibleComponent implements Component
 
                     }
                 });
-            } else if (shape == "bubble") {
+            } else if (shape.equals("bubble")) {
                 BubbleImageView imageView = new BubbleImageView(this.context);
                 imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 imageView.setArrowPosition(BubbleShader.ArrowPosition.LEFT);
@@ -169,7 +169,7 @@ public class CustomImage extends AndroidNonvisibleComponent implements Component
 
                     }
                 });
-            } else if (shape == "round") {
+            } else if (shape.equals("round")) {
                 RoundedImageView imageView = new RoundedImageView(this.context);
                 imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 imageView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
@@ -197,7 +197,7 @@ public class CustomImage extends AndroidNonvisibleComponent implements Component
 
                     }
                 });
-            } else if (shape == "star") {
+            } else if (shape.equals("star")) {
                 StarImageView imageView = new StarImageView(this.context);
                 imageView.setScaleType(ImageView.ScaleType.FIT_XY);
                 imageView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
